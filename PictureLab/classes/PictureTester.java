@@ -74,6 +74,18 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+    //error:DigitalPicture p=new DigitalPicture();
+    //interface does not implement their methods,unless every method is implement cannot create 
+    //object instances
+    //DigitalPicture p= new SimplePicture(); 
+    //works: local varibales can reference 
+    //DigitalPicture p = new Picture(); 
+    //works; picture is implements that of simple picture
+    //can always sign a reference lower in anarchy 
+    //SimplePicture p = new Picture(); 
+    //works: variable of parent class,object created is that of a subclass 
+    //Picture p = new SimplePicture(); 
+    //error
     testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
