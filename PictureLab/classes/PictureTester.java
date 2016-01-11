@@ -32,7 +32,36 @@ public class PictureTester
     caterpillar.mirrorHorizontal();
     caterpillar.explore();
       
-  }     
+  } 
+  public static void testMirrorHorizontalBotToTop() 
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
+    caterpillar.explore();
+      
+  } 
+  public static void testMirrorArms() 
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+      
+      
+  }   
+  public static void testMirrorGulls() 
+  {
+    Picture seagul = new Picture("seagull.jpg");
+    seagul.explore();
+    seagul.mirrorGull();
+    seagul.explore();
+      
+      
+  }    
+  
+  
+  
   
   public static void testMirrorVerticalRightToLeft()
   {
