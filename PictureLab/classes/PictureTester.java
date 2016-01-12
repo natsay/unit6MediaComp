@@ -60,6 +60,56 @@ public class PictureTester
       
   }    
   
+  public static void testKeepOnlyBlue() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
+    beach.explore();
+      
+      
+  }  
+  
+  public static void testNegate() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+      
+      
+  }   
+  public static void testKeepOnlyRed() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyRed();
+    beach.explore();
+      
+      
+  }  
+  public static void testKeepOnlyGreen() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyGreen();
+    beach.explore();
+      
+      
+  }  
+  
+  public static void testGrayscale() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.grayscale();
+    beach.explore();
+      
+      
+  }  
+  
+  
+  
   
   
   

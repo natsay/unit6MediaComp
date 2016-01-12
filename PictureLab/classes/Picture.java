@@ -246,7 +246,87 @@ public class Picture extends SimplePicture
     }
     
       
-  }    
+  }  
+  public void keepOnlyBlue() 
+  {
+      Pixel[][] pixels = this.getPixels2D();
+      for(Pixel[] rowArray: pixels) 
+      {
+          for(Pixel pixelObj: rowArray) 
+          {
+              pixelObj.setRed(0); 
+              pixelObj.setGreen(0); 
+          }     
+      }    
+      
+  } 
+  
+   public void keepOnlyRed() 
+  {
+      Pixel[][] pixels = this.getPixels2D();
+      for(Pixel[] rowArray: pixels) 
+      {
+          for(Pixel pixelObj: rowArray) 
+          {
+              pixelObj.setBlue(0); 
+              pixelObj.setGreen(0); 
+          }     
+      }    
+      
+  } 
+  
+  
+   public void keepOnlyGreen() 
+  {
+      Pixel[][] pixels = this.getPixels2D();
+      for(Pixel[] rowArray: pixels) 
+      {
+          for(Pixel pixelObj: rowArray) 
+          {
+              pixelObj.setRed(0); 
+              pixelObj.setBlue(0); 
+          }     
+      }    
+      
+  } 
+  
+  
+  
+  
+  
+  
+  public void negate() 
+  {
+      Pixel[][] pixels = this.getPixels2D();
+      for(Pixel[] rowArray: pixels) 
+      {
+          for(Pixel pixelObj: rowArray) 
+          {
+              pixelObj.setRed(255-pixelObj.getRed());
+              pixelObj.setGreen(255-pixelObj.getGreen()); 
+              pixelObj.setBlue(255-pixelObj.getBlue());
+          }     
+      }    
+      
+  }   
+  
+  public void grayscale() 
+  {
+      Pixel[][] pixels = this.getPixels2D();
+      for(Pixel[] rowArray: pixels) 
+      {
+          for(Pixel pixelObj: rowArray) 
+          {
+              int avg= (int)((pixelObj.getRed()+pixelObj.getGreen()+pixelObj.getBlue())/3);
+              pixelObj.setRed(avg);
+              pixelObj.setGreen(avg);
+              pixelObj.setBlue(avg);
+          }     
+      }    
+      
+  }     
+  
+
   
  
   /** copy from the passed fromPic to the
@@ -279,7 +359,8 @@ public class Picture extends SimplePicture
       }
     }   
   }
-
+  
+  
   /** Method to create a collage of several pictures */
   public void createCollage()
   {
@@ -296,6 +377,7 @@ public class Picture extends SimplePicture
     this.mirrorVertical();
     this.write("collage.jpg");
   }
+  
   
   
   /** Method to show large changes in color 
