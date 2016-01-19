@@ -226,7 +226,33 @@ public class Picture extends SimplePicture
     }
     
      
-  } 
+  }
+  
+  public void cropAndCopy( Picture sourcePicture, int startSourceRow, int endSourceRow, int startSourceCol, int endSourceCol,
+         int startDestRow, int startDestCol )
+  {
+      Pixel[][] sourceGrid = sourcePicture.getPixels2D();
+      Pixel[][] endGrid = this.getPixels2D();
+      Pixel sourcePixel = null; 
+      Pixel endPixel = null;
+      int count1=0;
+      int count2=0;
+      for(int row=startSourceRow; row<endSourceRow; row++)
+      {
+          for(int col=startSourceCol; col<endSourceCol; col++) 
+          {
+              sourcePixel=sourceGrid[row][col]; 
+              endPixel=endGrid[startDestRow+count1][startDestCol+count2]; 
+              endPixel.setColor(sourcePixel.getColor()); 
+              count2++; 
+          }
+          count1++; 
+          count2=0; 
+      }     
+         
+
+  }     
+  
   public void mirrorGull() 
   {
     Pixel[][] pixels = this.getPixels2D();

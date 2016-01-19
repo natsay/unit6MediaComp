@@ -101,12 +101,23 @@ public class PictureTester
   public static void testGrayscale() 
   {
     Picture beach = new Picture("beach.jpg");
+    
     beach.explore();
     beach.grayscale();
     beach.explore();
       
       
-  }  
+  }
+  
+  public static void testCropandCopy() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    Picture water = new Picture("water.jpg");
+    water.explore();
+    water.cropAndCopy(beach,100, 200, 100, 200 ,300 ,300);
+    water.explore();
+      
+  }     
   
   
   
