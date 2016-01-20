@@ -251,7 +251,9 @@ public class Picture extends SimplePicture
       }     
          
 
-  }     
+  } 
+  
+    
   
   public void mirrorGull() 
   {
@@ -315,6 +317,32 @@ public class Picture extends SimplePicture
       }    
       
   } 
+  
+  public Picture scaleByHalf()
+  {
+      Picture picture = new Picture(1152, 1536);
+      Pixel[][] pixels = this.getPixels2D();
+      Pixel[][] picturePixels = picture.getPixels2D();
+      Pixel origPixel = null;
+      int counter1 = 0;
+      int counter2 = 0;
+
+      for (int i = 0; i < pixels.length; i += 2)
+      {
+          for (int j = 0; j < pixels[i].length; j += 2)
+          {
+              origPixel = pixels[i][j];
+              picturePixels[counter1][counter2].setColor(origPixel.getColor());
+              counter2++;
+          }
+          counter1++;
+          counter2 = 0;
+      }
+
+      return picture;
+}
+  
+  
   
   
   

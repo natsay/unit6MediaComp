@@ -117,12 +117,18 @@ public class PictureTester
     water.cropAndCopy(beach,100, 200, 100, 200 ,300 ,300);
     water.explore();
       
-  }     
+  }    
   
+  public static void testScalebyHalf() 
+  {
+      Picture beach = new Picture("beach.jpg");
+      Picture water = new Picture("water.jpg");
+      beach.explore();
+      water.scaleByHalf(); 
+      water.explore();
+  }    
   
-  
-  
-  
+
   
   public static void testMirrorVerticalRightToLeft()
   {
@@ -156,6 +162,8 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+  
+  
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
