@@ -258,7 +258,7 @@ public class Picture extends SimplePicture
   public void mirrorGull() 
   {
     Pixel[][] pixels = this.getPixels2D();
-    int mirrorPoint= 345; 
+    int mirrorPoint= 100; 
     Pixel rightPixel = null;
     Pixel leftPixel = null;
     //left arm
