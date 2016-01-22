@@ -17,6 +17,24 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testScaleByHalf() 
+  {
+      Picture water= new Picture("water.jpg"); 
+      water.explore(); 
+      Picture newWater=water.scaleByHalf(); 
+      newWater.explore();
+  } 
+  
+  public static void testMirrorDiagonal()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.mirrorDiagonal();
+    beach.explore();
+      
+  }    
+
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -25,6 +43,17 @@ public class PictureTester
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
+  
+    public static void testCropandCopy() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    Picture water = new Picture("water.jpg");
+    water.explore();
+    water.cropAndCopy(beach,100, 200, 100, 200 ,300 ,300);
+    water.explore();
+      
+  }     
+  
   public static void testMirrorHorizontal() 
   {
     Picture caterpillar = new Picture("caterpillar.jpg");
@@ -32,20 +61,59 @@ public class PictureTester
     caterpillar.mirrorHorizontal();
     caterpillar.explore();
       
-  }     
+  } 
+  public static void testMirrorHorizontalBotToTop() 
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
+    caterpillar.explore();
+      
+  } 
+  public static void testMirrorArms() 
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+      
+      
+  }   
+  public static void testMirrorGulls() 
+  {
+    Picture seagul = new Picture("seagull.jpg");
+    seagul.explore();
+    seagul.mirrorGull();
+    seagul.explore();
+      
+      
+  }  
+  public static void testKeepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
+    beach.explore();
+      
+  } 
+  public static void testNegate()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+      
+  }    
+  
+  
+  
+  
   
   public static void testMirrorVerticalRightToLeft()
   {
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorVerticalRightToLeft();
-    caterpillar.explore();
-  }
-  public static void testMirrorHorizontalBotToTop()
-  {
-    Picture caterpillar = new Picture("caterpillar.jpg");
-    caterpillar.explore();
-    caterpillar.mirrorHorizontalBotToTop();
     caterpillar.explore();
   }
   
@@ -81,6 +149,18 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+    //error:DigitalPicture p=new DigitalPicture();
+    //interface does not implement their methods,unless every method is implement cannot create 
+    //object instances
+    //DigitalPicture p= new SimplePicture(); 
+    //works: local varibales can reference 
+    //DigitalPicture p = new Picture(); 
+    //works; picture is implements that of simple picture
+    //can always sign a reference lower in anarchy 
+    //SimplePicture p = new Picture(); 
+    //works: variable of parent class,object created is that of a subclass 
+    //Picture p = new SimplePicture(); 
+    //error
     testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
@@ -93,7 +173,7 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
