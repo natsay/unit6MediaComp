@@ -105,25 +105,8 @@ public class PictureTester
       
   }    
   
-  public static void testKeepOnlyBlue() 
-  {
-    Picture beach = new Picture("beach.jpg");
-    beach.explore();
-    beach.keepOnlyBlue();
-    beach.explore();
-      
-      
-  }  
-  
-  public static void testNegate() 
-  {
-    Picture beach = new Picture("beach.jpg");
-    beach.explore();
-    beach.negate();
-    beach.explore();
-      
-      
-  }   
+
+
   public static void testKeepOnlyRed() 
   {
     Picture beach = new Picture("beach.jpg");
@@ -154,15 +137,7 @@ public class PictureTester
       
   }
   
-  public static void testCropandCopy() 
-  {
-    Picture beach = new Picture("beach.jpg");
-    Picture water = new Picture("water.jpg");
-    water.explore();
-    water.cropAndCopy(beach,100, 200, 100, 200 ,300 ,300);
-    water.explore();
-      
-  }    
+   
   
   public static void testScalebyHalf() 
   {

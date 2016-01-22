@@ -6,6 +6,7 @@ import java.text.*;
 import java.util.*;
 import java.util.List; // resolves problem with java.awt.List and java.util.List
 
+
 /**
  * A class that represents a picture.  This class inherits from 
  * SimplePicture and allows the student to add functionality to
@@ -15,9 +16,8 @@ import java.util.List; // resolves problem with java.awt.List and java.util.List
  */
 public class Picture extends SimplePicture 
 {
-  ///////////////////// constructors //////////////////////////////////
-  
-  /**
+    
+    /**
    * Constructor that takes no arguments 
    */
   public Picture ()
@@ -191,11 +191,11 @@ public class Picture extends SimplePicture
         leftPixel.setColor(rightPixel.getColor());
       }
     } 
-      
-<<<<<<< HEAD
+
   }    
-=======
-  }
+
+  
+
   
   public void mirrorArms() 
   {
@@ -342,13 +342,8 @@ public class Picture extends SimplePicture
       }
 
       return picture;
-}
-  
-  
-  
-  
-  
-  
+    }
+
   
   
   public void negate() 
@@ -381,9 +376,25 @@ public class Picture extends SimplePicture
       }    
       
   }     
-  
-
->>>>>>> origin/master
+  public void mirrorDiagonal() // mirrors from top right to bottom left
+  {
+      Pixel[][] pixels = this.getPixels2D();
+      Pixel topRightPixel = null;
+      Pixel bottomLeftPixel = null;
+      int maxLength;
+      if (pixels.length < pixels[0].length) { maxLength = pixels.length; }
+      else {maxLength = pixels[0].length; }
+      
+      for (int row = 0; row < maxLength; row++)
+      {
+          for (int col = row; col < maxLength; col++)
+          {
+              topRightPixel = pixels[row][col];
+              bottomLeftPixel = pixels[col][row];
+              bottomLeftPixel.setColor(topRightPixel.getColor());
+          }
+      }
+  }
   
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
@@ -473,5 +484,7 @@ public class Picture extends SimplePicture
     beach.zeroBlue();
     beach.explore();
   }
+  // this } is the end of class Picture, put all new methods before this
+
+}    
   
-} // this } is the end of class Picture, put all new methods before this
