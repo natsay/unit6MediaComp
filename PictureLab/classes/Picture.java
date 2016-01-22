@@ -381,13 +381,19 @@ public class Picture extends SimplePicture
       Pixel[][] pixels = this.getPixels2D();
       Pixel topRightPixel = null;
       Pixel bottomLeftPixel = null;
-      int maxLength;
-      if (pixels.length < pixels[0].length) { maxLength = pixels.length; }
-      else {maxLength = pixels[0].length; }
-      
-      for (int row = 0; row < maxLength; row++)
+      int length;
+      if (pixels.length < pixels[0].length) 
       {
-          for (int col = row; col < maxLength; col++)
+          length = pixels.length; 
+      }
+      else 
+      {
+          length = pixels[0].length; 
+      }
+      
+      for (int row = 0; row < length; row++)
+      {
+          for (int col = row; col < length; col++)
           {
               topRightPixel = pixels[row][col];
               bottomLeftPixel = pixels[col][row];
