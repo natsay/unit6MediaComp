@@ -105,8 +105,75 @@ public class PictureTester
       
   }    
   
+  public static void testKeepOnlyBlue() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyBlue();
+    beach.explore();
+      
+      
+  }  
   
+  public static void testNegate() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+      
+      
+  }   
+  public static void testKeepOnlyRed() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyRed();
+    beach.explore();
+      
+      
+  }  
+  public static void testKeepOnlyGreen() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.keepOnlyGreen();
+    beach.explore();
+      
+      
+  }  
   
+  public static void testGrayscale() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    
+    beach.explore();
+    beach.grayscale();
+    beach.explore();
+      
+      
+  }
+  
+  public static void testCropandCopy() 
+  {
+    Picture beach = new Picture("beach.jpg");
+    Picture water = new Picture("water.jpg");
+    water.explore();
+    water.cropAndCopy(beach,100, 200, 100, 200 ,300 ,300);
+    water.explore();
+      
+  }    
+  
+  public static void testScalebyHalf() 
+  {
+      Picture beach = new Picture("beach.jpg");
+      Picture water = new Picture("water.jpg");
+      beach.explore();
+      water.scaleByHalf(); 
+      water.explore();
+  }    
+  
+
   
   
   public static void testMirrorVerticalRightToLeft()
@@ -141,6 +208,8 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+  
+  
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
